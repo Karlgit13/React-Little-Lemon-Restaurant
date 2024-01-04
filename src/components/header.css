@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.burgerButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.basketButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.headerLogo {
+  padding: 5px 15px 5px 15px;
+  width: 120px;
+}

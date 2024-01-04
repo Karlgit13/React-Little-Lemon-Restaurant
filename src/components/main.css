@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Karla";
+  src: url("../fonts/Karla.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MarkaziText";
+  src: url("../fonts/MarkaziText.ttf") format("truetype");
+}
+
+.foodImg {
+  width: 120px;
+  height: 120px;
+  float: right;
+}
+
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  background: #495e57;
+}
+
+.mainTitle {
+  color: #f4ce14;
+  text-shadow: 2px 4px 2px #000;
+  font-family: "MarkaziText";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.mainSubTitle {
+  margin-top: -45px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #edefee;
+  text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+  font-family: "MarkaziText";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mainContainer {
+  margin: 15px 0px;
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+}
+
+.mainParagraph {
+  color: #edefee;
+  max-width: 151px;
+  font-family: "Karla";
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.foodImg {
+  position: absolute;
+  right: 45px;
+  width: 130px;
+  height: 135px;
+  border-radius: 16px;
+}
+
+.mainButton {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  padding: 5px 15px;
+  border-radius: 16px;
+  cursor: pointer;
+  color: #000;
+  background: #f4ce14;
+  font-family: "MarkaziText";
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Add the box-shadow property */
+}
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+.mainOrderTitle {
+  margin: 5px 0px;
+  font-family: "Karla";
+  font-weight: 600;
+  font-size: 22px;
+  text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.mainScrollMenu {
+  padding: 16px;
+  margin-left: -20px;
+  width: 100%;
+  overflow-x: auto; /* Add the overflow-x property to enable horizontal scrolling */
+  white-space: nowrap; /* Prevent the buttons from wrapping to a new line */
+
+  button {
+    padding: 4px 12px; /* Increase the padding to make the buttons longer */
+    margin: 0px 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #475e57;
+    border: 1px solid black;
+    font-family: "Karla";
+    font-size: 17px;
+    border-radius: 16px;
+    flex-shrink: 0;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+  }
+}
