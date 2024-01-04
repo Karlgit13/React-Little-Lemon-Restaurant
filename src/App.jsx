@@ -1,6 +1,5 @@
 import "./App.css";
 import Header from "./components/Header";
-import Nav from "./components/Nav";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import ArticleCards from "./components/ArticleCards";
@@ -13,7 +12,7 @@ function App() {
           <Header />
         </div>
         <div>
-          <Nav />
+          {/* Removed Nav component here, as it's conditionally rendered in Header */}
         </div>
         <div>
           <Main />

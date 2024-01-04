@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./nav.css";
 
-const Nav = () => {
+const Nav = ({ isVisible }) => {
   return (
     <nav>
-      <div className="nav">
+      <div className={`nav ${!isVisible ? "hidden" : ""}`}>
         <ul>
           <li>
             <Link to="/">Home</Link>
