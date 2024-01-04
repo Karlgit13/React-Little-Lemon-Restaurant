@@ -1,3 +1,30 @@
+ul > li {
+  display: inline;
+  z-index: 99;
+}
+
 .nav {
-  display: none;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: #000;
+  font-family: "MarkaziText";
+  font-size: 20px;
+  padding: 16px;
+  background-color: #fff;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+  z-index: 99;
+}
+
+ul {
+  margin: 0;
+  padding: 16px;
+  z-index: 99;
 }

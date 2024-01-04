@@ -10,48 +10,59 @@ const ArticleCards = () => {
   return (
     <article>
       <div className="articleCardsContainer">
-        <section className="card1">
+        <section>
           <h1 className="cardTitle">Greek Salad</h1>
-          <p className="cardDesc">
-            The famous greek salad of crispy lettuce, peppers, olives and our
-            Chicago style feta cheese, garnished with crunchy garlic and
-            rosemary croutons.
-          </p>
-          <img className="cardImg" src={greekSalad} alt="greekSalad" />
+          <div className="card1">
+            <p className="cardDesc">
+              The famous greek salad of crispy lettuce, peppers, olives and our
+              Chicago style feta cheese, garnished with crunchy garlic and
+              rosemary croutons.
+            </p>
+            <img className="cardImg" src={greekSalad} alt="greekSalad" />
+          </div>
         </section>
-        <section className="card2">
+        <section>
           <h1 className="cardTitle">Brushetta</h1>
-          <p className="cardDesc">
-            Our Bruschetta is made from grilled bread that has been smeared with
-            garlic and seasoned with salt and olive oil. Toppings of tomato,
-            veggies, beans, cured pork, or cheese are examples of variations. In
-            Italy, a brustolina grill is frequently used to create bruschetta.
-          </p>
-          <img className="cardImg" src={brushetta} alt="brushetta" />
+          <div className="card2">
+            <p className="cardDesc">
+              Our Bruschetta is made from grilled bread that has been smeared
+              with garlic and seasoned with salt and olive oil. Toppings of
+              tomato, veggies, beans, cured pork, or cheese are examples of
+              variations. In Italy, a brustolina grill is frequently used to
+              create bruschetta.
+            </p>
+            <img className="cardImg" src={brushetta} alt="brushetta" />
+          </div>
         </section>
-        <section className="card3">
+        <section>
           <h1 className="cardTitle">Grilled Fish</h1>
-          <p className="cardDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed
-            cursus...
-          </p>
-          <img className="cardImg" src={grilledFish} alt="fish" />
+          <div className="card3">
+            <p className="cardDesc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              sed cursus...
+            </p>
+            <img className="cardImg" src={grilledFish} alt="fish" />
+          </div>
         </section>
-        <section className="card4">
+        <section>
           <h1 className="cardTitle">Pasta</h1>
-          <p className="cardDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed
-            cursus...
-          </p>
-          <img className="cardImg" src={pasta} alt="pasta" />
+          <div className="card4">
+            <p className="cardDesc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              sed cursus...
+            </p>
+            <img className="cardImg" src={pasta} alt="pasta" />
+          </div>
         </section>
-        <section className="card5">
+        <section>
           <h1 className="cardTitle">Lemon Dessert</h1>
-          <p className="cardDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed
-            cursus...
-          </p>
-          <img className="cardImg" src={lemonDessert} alt="lemonDessert" />
+          <div className="card5">
+            <p className="cardDesc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              sed cursus...
+            </p>
+            <img className="cardImg" src={lemonDessert} alt="lemonDessert" />
+          </div>
         </section>
       </div>
     </article>
