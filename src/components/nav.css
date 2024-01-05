@@ -1,12 +1,13 @@
+.navLogos {
+  width: 35px;
+}
 ul > li {
   display: inline;
-  z-index: 99;
 }
 
 .nav {
   display: flex;
   justify-content: center;
-  z-index: 99;
 }
 
 ul > li > a {
@@ -20,13 +21,11 @@ ul > li > a {
   font-style: normal;
   line-height: normal;
   text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
-  z-index: 99;
 }
 
 ul {
   margin: 0;
   padding: 16px;
-  z-index: 99;
 }
 
 .nav {
@@ -35,4 +34,15 @@ ul {
 
 .hidden {
   transform: translateX(-100%);
+}
+
+@media (min-width: 992px) {
+  .nav {
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -63px;
+    margin-bottom: 7px;
+  }
 }

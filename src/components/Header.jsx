@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import Logo from "../assets/Logo2.svg";
 import BurgerMenu from "../assets/hamburger_menu.svg";
@@ -8,6 +8,22 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [navVisible, setNavVisible] = useState(false);
+
+  useEffect(() => {
+    const updateVisibility = () => {
+      if (window.innerWidth >= 992) {
+        setNavVisible(true);
+      } else {
+        setNavVisible(false);
+      }
+    };
+
+    updateVisibility();
+
+    window.addEventListener("resize", updateVisibility);
+
+    return () => window.removeEventListener("resize", updateVisibility);
+  }, []);
 
   const toggleNav = () => {
     setNavVisible(!navVisible);

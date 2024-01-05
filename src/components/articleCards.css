@@ -27,7 +27,11 @@
   margin-right: 25px;
 }
 
-.card1, .card2, .card3, .card4, .card5 {
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
   display: inline-flex;
   align-items: center;
   margin-bottom: 30px;
