@@ -14,7 +14,7 @@ const Nav = ({ isVisible }) => {
             <Link to="/">Order</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/Booking">Booking</Link>
           </li>
           <li>
             <Link to="/">Contact</Link>

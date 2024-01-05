@@ -4,6 +4,7 @@ import Logo from "../assets/Logo2.svg";
 import BurgerMenu from "../assets/hamburger_menu.svg";
 import Basket from "../assets/Basket.svg";
 import Nav from "./Nav";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [navVisible, setNavVisible] = useState(false);
@@ -18,9 +19,9 @@ const Header = () => {
         <button onClick={toggleNav} className="burgerButton">
           <img src={BurgerMenu} alt="burgerMenu" />
         </button>
-        <a href="#">
+        <Link to="/">
           <img className="headerLogo" src={Logo} alt="logo" />
-        </a>
+        </Link>
         <button className="basketButton">
           <img src={Basket} alt="basket" />
         </button>

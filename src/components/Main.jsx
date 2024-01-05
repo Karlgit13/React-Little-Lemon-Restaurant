@@ -1,6 +1,7 @@
 import React from "react";
 import "./main.css";
 import FoodImg from "../assets/restauranfood.jpg";
+import ArticleCards from "./ArticleCards";
 
 const Main = () => {
   return (
@@ -26,6 +27,7 @@ const Main = () => {
           <button>Desserts</button>
           <button>Drinks</button>
         </div>
+        <ArticleCards />
       </div>
     </main>
   );
