@@ -11,13 +11,13 @@ const Nav = ({ isVisible }) => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Order</Link>
+            <Link to="/Order">Order</Link>
           </li>
           <li>
             <Link to="/Booking">Booking</Link>
           </li>
           <li>
-            <Link to="/">Contact</Link>
+            <Link to="/Contact">Contact</Link>
           </li>
         </ul>
       </div>
