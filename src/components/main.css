@@ -1,25 +1,75 @@
-@font-face {
-  font-family: "Karla";
-  src: url("../fonts/Karla.ttf") format("truetype");
+@media (min-width: 992px) {
+  .mobileImg {
+    display: none;
+  }
+
+  .mainCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background: #495e57;
+    padding-bottom: 50px;
+  }
+
+  .desktopImgContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .mainButton:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .desktopImg1:hover,
+  .desktopImg2:hover,
+  .desktopImg3:hover,
+  .desktopImg4:hover {
+    transform: scale(1.05);
+  }
+
+  .desktopImg1,
+  .desktopImg2,
+  .desktopImg3,
+  .desktopImg4 {
+    border: 1px solid white;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    width: 250px;
+    margin-bottom: 32px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .LinkClassName {
+    text-decoration: none;
+  }
 }
 
-@font-face {
-  font-family: "MarkaziText";
-  src: url("../fonts/MarkaziText.ttf") format("truetype");
+@media (max-width: 992px) {
+  .desktopImg1,
+  .desktopImg2,
+  .desktopImg3,
+  .desktopImg4 {
+    display: none;
+  }
+
+  .mainCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    background: #495e57;
+  }
 }
 
-.foodImg {
+.mobileImg {
   width: 120px;
   height: 120px;
   float: right;
-}
-
-.mainCard {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 16px;
-  background: #495e57;
 }
 
 .mainTitle {
@@ -64,12 +114,16 @@
   text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
-.foodImg {
+.mobileImg {
   position: absolute;
   right: 45px;
   width: 130px;
   height: 135px;
   border-radius: 16px;
+}
+
+.LinkClassName {
+  text-decoration: none;
 }
 
 .mainButton {
@@ -85,7 +139,7 @@
   font-family: "MarkaziText";
   font-size: 18px;
   font-weight: 500;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Add the box-shadow property */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .menuContainer {
   display: flex;
@@ -108,11 +162,11 @@
   padding: 16px;
   margin-left: -20px;
   width: 100%;
-  overflow-x: auto; /* Add the overflow-x property to enable horizontal scrolling */
-  white-space: nowrap; /* Prevent the buttons from wrapping to a new line */
+  overflow-x: auto;
+  white-space: nowrap;
 
   button {
-    padding: 4px 12px; /* Increase the padding to make the buttons longer */
+    padding: 4px 12px;
     margin: 0px 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     color: #475e57;
@@ -128,5 +182,3 @@
     cursor: pointer;
   }
 }
-
-

@@ -1,6 +1,12 @@
 .navLogos {
   width: 35px;
 }
+
+.navLogos:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
 ul > li {
   display: inline;
 }
@@ -10,7 +16,11 @@ ul > li {
   justify-content: center;
 }
 
-ul > li > a {
+ul li a {
+  padding: 16px;
+}
+
+/* ul > li > a {
   text-decoration: none;
   color: #000;
   font-family: "MarkaziText";
@@ -21,7 +31,7 @@ ul > li > a {
   font-style: normal;
   line-height: normal;
   text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
-}
+} */
 
 ul {
   margin: 0;

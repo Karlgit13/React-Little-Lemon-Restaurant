@@ -17,9 +17,19 @@
   cursor: pointer;
 }
 
+.basketButton:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
 .headerLogo {
   padding: 5px 15px 5px 15px;
   width: 120px;
+}
+
+.headerLogo:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
 }
 
 @media (min-width: 992px) {

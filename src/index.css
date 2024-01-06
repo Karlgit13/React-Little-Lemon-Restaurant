@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@font-face {
+  font-family: "Karla";
+  src: url("./fonts/Karla.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MarkaziText";
+  src: url("./fonts/MarkaziText.ttf") format("truetype");
+}
