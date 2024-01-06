@@ -8,6 +8,27 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [navVisible, setNavVisible] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0); // Håller koll på senaste scroll position
+
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // Om scrollningen är nedåt
+        setNavVisible(true); // Dölj navigationsbaren
+      }
+      setLastScrollY(window.scrollY); // Uppdatera den senaste scroll positionen
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
 
   useEffect(() => {
     const updateVisibility = () => {
@@ -42,7 +63,7 @@ const Header = () => {
           <img src={Basket} alt="basket" />
         </button>
       </div>
-      {navVisible && <Nav isVisible={navVisible} />}
+      <Nav isVisible={navVisible} />
     </header>
   );
 };

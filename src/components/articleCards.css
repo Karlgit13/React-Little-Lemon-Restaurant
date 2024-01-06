@@ -1,48 +1,86 @@
-.articleCardsContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 16px;
-}
+/* MOBILE - VIEW */
 
-.cardTitle {
-  color: #000;
-  font-family: "Karla";
-  font-size: 18px;
-  font-weight: 600;
-  line-height: normal;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-  font-style: normal;
-  margin-bottom: 5px;
-  text-decoration: underline;
-}
+@media (max-width: 992px) {
+  .articleCardsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+  }
 
-.cardDesc {
-  font-family: "Karla";
-  color: #495e57;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: normal;
-  margin-right: 25px;
-}
+  .cardTitle {
+    color: #000;
+    font-family: "Karla";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    margin-bottom: 5px;
+    text-decoration: underline;
+  }
 
-.card1,
-.card2,
-.card3,
-.card4,
-.card5 {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 30px;
+  .cardDesc {
+    font-family: "Karla";
+    color: #495e57;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2em; /* Set the line height to control the number of lines */
+    margin-right: 25px;
+    max-height: 3.6em; /* Set the max height to show 2-3 lines */
+    max-width: 25vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Set the number of lines to show */
+    -webkit-box-orient: vertical;
+  }
 
-  img {
-    border-radius: 16px;
-    width: 83px;
-    height: 83px;
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5 {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .cardImg {
+      position: absolute;
+      right: 2vh;
+      border-radius: 16px;
+      width: 110px;
+      height: 110px;
+      border: 1px solid #000;
+      box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  section {
+    border-bottom: 1px solid black;
+    width: auto;
   }
 }
 
-section {
-  border-bottom: 1px solid black;
+/* DESKTOP - VIEW */
+
+@media (min-width: 992px) {
+  .cardImg {
+    width: 80px;
+  }
+
+  .articleCardsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  section {
+    border: 1px solid black;
+    max-width: 300px;
+    min-width: 300px;
+  }
 }

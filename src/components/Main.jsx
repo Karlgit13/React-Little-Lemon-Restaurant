@@ -34,11 +34,11 @@ const Main = () => {
       <div className="menuContainer">
         <h1 className="mainOrderTitle">ORDER FOR DELIVERY!</h1>
         <div className="mainScrollMenu">
-          <button>Specials</button>
-          <button>Starters</button>
-          <button>Main</button>
-          <button>Desserts</button>
-          <button>Drinks</button>
+          <button className="buttonCategories">Specials</button>
+          <button className="buttonCategories">Starters</button>
+          <button className="buttonCategories">Main</button>
+          <button className="buttonCategories">Desserts</button>
+          <button className="buttonCategories">Drinks</button>
         </div>
         <ArticleCards />
       </div>

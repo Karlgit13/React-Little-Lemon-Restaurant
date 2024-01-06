@@ -1,23 +1,36 @@
-.navLogos {
-  width: 35px;
-}
+/* MOBILE */
+@media (max-width: 992px) {
+  .navLogos {
+    width: 30px;
+  }
+  ul > li {
+    display: inline;
+  }
+  ul li a {
+    padding: 12px;
+  }
+  ul {
+    margin-right: 44px;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column; /* eller 'row' om du vill ha det horisontellt */
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-100%); /* Startar dold */
+    position: fixed; /* Fixerad position */
+    top: 0; /* Vid toppen av sidan */
+    left: 0;
+    right: 0;
+    background: #fff; /* Bakgrundsfärg */
+    /* Lägg till andra stilar som behövs för din nav */
+    z-index: 100; /* Högre än andra element */
+  }
 
-.navLogos:hover {
-  transform: scale(1.2);
-  transition: transform 0.2s ease-in-out;
-}
-
-ul > li {
-  display: inline;
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-}
-
-ul li a {
-  padding: 16px;
+  .nav.hidden {
+    transform: translateY(0); /* Flyttas till synlig position */
+  }
 }
 
 /* ul > li > a {
@@ -33,26 +46,31 @@ ul li a {
   text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
 } */
 
-ul {
-  margin: 0;
-  padding: 16px;
-}
-
-.nav {
-  transition: transform 0.5s ease-in-out;
-}
-
-.hidden {
-  transform: translateX(-100%);
-}
-
+/* DESKTOP */
 @media (min-width: 992px) {
+  .navLogos {
+    width: 35px;
+  }
   .nav {
-    transform: none;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -63px;
     margin-bottom: 7px;
+  }
+
+  ul > li {
+    display: inline;
+  }
+  ul li a {
+    padding: 16px;
+  }
+  ul {
+    margin: 0;
+    padding: 16px;
+  }
+  .navLogos:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
   }
 }

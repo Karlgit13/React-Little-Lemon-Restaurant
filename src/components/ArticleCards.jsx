@@ -13,17 +13,18 @@ const ArticleCards = () => {
         <section>
           <h1 className="cardTitle">Greek Salad</h1>
           <div className="card1">
+            <img className="cardImg" src={greekSalad} alt="greekSalad" />
             <p className="cardDesc">
               The famous greek salad of crispy lettuce, peppers, olives and our
               Chicago style feta cheese, garnished with crunchy garlic and
               rosemary croutons.
             </p>
-            <img className="cardImg" src={greekSalad} alt="greekSalad" />
           </div>
         </section>
         <section>
           <h1 className="cardTitle">Brushetta</h1>
           <div className="card2">
+            <img className="cardImg" src={brushetta} alt="brushetta" />
             <p className="cardDesc">
               Our Bruschetta is made from grilled bread that has been smeared
               with garlic and seasoned with salt and olive oil. Toppings of
@@ -31,7 +32,6 @@ const ArticleCards = () => {
               variations. In Italy, a brustolina grill is frequently used to
               create bruschetta.
             </p>
-            <img className="cardImg" src={brushetta} alt="brushetta" />
           </div>
         </section>
         <section>
