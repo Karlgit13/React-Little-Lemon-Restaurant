@@ -46,16 +46,15 @@
     display: inline-flex;
     align-items: center;
     margin-bottom: 30px;
-
-    .cardImg {
-      position: absolute;
-      right: 2vh;
-      border-radius: 16px;
-      width: 110px;
-      height: 110px;
-      border: 1px solid #000;
-      box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
-    }
+  }
+  .cardImg {
+    position: absolute;
+    right: 2vh;
+    border-radius: 16px;
+    width: 110px;
+    height: 110px;
+    border: 1px solid #000;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
   }
 
   section {

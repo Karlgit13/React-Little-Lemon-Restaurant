@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./main.css";
 import FoodImg from "../assets/restauranfood.jpg";
 import ArticleCards from "./ArticleCards";
@@ -12,12 +12,18 @@ import "aos/dist/aos.css";
 import MainScrollMenu from "./MainScrollMenu";
 
 const Main = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   useEffect(() => {
     AOS.init({
       duration: 2000,
       easing: "ease-out-cubic",
     });
   }, []);
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  }
 
   return (
     <main>
@@ -74,8 +80,8 @@ const Main = () => {
       </div>
       <div className="menuContainer">
         <h1 className="mainOrderTitle">ORDER FOR DELIVERY!</h1>
-          <MainScrollMenu />
-        <ArticleCards />
+          <MainScrollMenu onSelectCategory={handleCategoryClick} />
+        <ArticleCards category={selectedCategory}/>
       </div>
     </main>
   );
