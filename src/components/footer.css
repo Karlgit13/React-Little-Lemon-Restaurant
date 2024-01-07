@@ -1,3 +1,89 @@
-footer {
-  display: none;
+/* DESKTOP */
+@media (min-width: 992px) {
+  .footer {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #495e57;
+  }
+  .footerTitle {
+    padding-top: 30px;
+    color: #f4ce14;
+    text-shadow: 2px 4px 2px #000;
+    font-family: "MarkaziText";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: -20px;
+  }
+
+  .socialsLogo {
+    width: 30px;
+    margin: 5px;
+  }
+
+  .footerUl {
+    padding: 35px 0px;
+  }
+
+  li {
+    text-decoration: none;
+    color: #edefee;
+    max-width: 450px;
+    font-family: "Karla";
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
+    list-style-type: none; /* BEGIN: Remove bullet point */
+  }
+
+  a {
+    text-decoration: none; /* BEGIN: Remove underline */
+  }
+}
+
+/* MOBILE */
+@media (max-width: 992px) {
+  .footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: left;
+    background-color: #495e57;
+    padding: 4px;
+  }
+  li {
+    text-decoration: none;
+    list-style-type: none;
+    color: #edefee;
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
+    font-style: normal;
+    line-height: normal;
+    font-family: "Karla";
+  }
+  .footerTitle {
+    text-align: start;
+    color: #f4ce14;
+    text-shadow: 2px 4px 2px #000;
+    font-family: "MarkaziText";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 5px;
+  }
+  .footerUl {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+  }
+  .socialsLogo {
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    margin: 5px;
+  }
 }

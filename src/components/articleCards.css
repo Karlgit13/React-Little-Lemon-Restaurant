@@ -68,7 +68,8 @@
 
 @media (min-width: 992px) {
   .cardImg {
-    width: 80px;
+    height: 200px;
+    width: 100%;
   }
 
   .articleCardsContainer {
@@ -79,8 +80,42 @@
   }
 
   section {
+    margin: 8px;
+    background-color: #495e57;
     border: 1px solid black;
-    max-width: 300px;
-    min-width: 300px;
+    border-radius: 16px;
+    max-width: 200px;
+    min-width: 200px;
+  }
+
+  section:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .cardTitle {
+    line-height: normal;
+    font-family: "MarkaziText";
+    font-size: 24px;
+    font-weight: 400;
+    color: #f4ce14;
+    text-align: center;
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .cardDesc {
+    font-family: "Karla";
+    color: #edefee;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 30px;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Set the number of lines to show */
+    -webkit-box-orient: vertical;
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
   }
 }

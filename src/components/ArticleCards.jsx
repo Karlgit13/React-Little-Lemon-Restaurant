@@ -37,31 +37,31 @@ const ArticleCards = () => {
         <section>
           <h1 className="cardTitle">Grilled Fish</h1>
           <div className="card3">
+            <img className="cardImg" src={grilledFish} alt="fish" />
             <p className="cardDesc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sed cursus...
             </p>
-            <img className="cardImg" src={grilledFish} alt="fish" />
           </div>
         </section>
         <section>
           <h1 className="cardTitle">Pasta</h1>
           <div className="card4">
+            <img className="cardImg" src={pasta} alt="pasta" />
             <p className="cardDesc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sed cursus...
             </p>
-            <img className="cardImg" src={pasta} alt="pasta" />
           </div>
         </section>
         <section>
           <h1 className="cardTitle">Lemon Dessert</h1>
           <div className="card5">
+            <img className="cardImg" src={lemonDessert} alt="lemonDessert" />
             <p className="cardDesc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sed cursus...
             </p>
-            <img className="cardImg" src={lemonDessert} alt="lemonDessert" />
           </div>
         </section>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./main.css";
 import FoodImg from "../assets/restauranfood.jpg";
 import ArticleCards from "./ArticleCards";
@@ -7,39 +7,74 @@ import marioAndAdrian2 from "../assets/Mario and Adrian b.jpg";
 import restaurantChef from "../assets/restaurant chef B.jpg";
 import restaurantImg from "../assets/restaurant.jpg";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import MainScrollMenu from "./MainScrollMenu";
 
 const Main = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
   return (
     <main>
       <div className="mainCard">
-        <h1 className="mainTitle">Little Lemon</h1>
-        <h4 className="mainSubTitle">Restaurant</h4>
+        <h1 data-aos="fade-left" className="mainTitle">
+          Little Lemon
+        </h1>
+        <h4 data-aos="fade-left" className="mainSubTitle">
+          Restaurant
+        </h4>
         <div className="mainContainer">
-          <p className="mainParagraph">
+          <p data-aos="fade-left" className="mainParagraph">
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <img className="mobileImg" src={FoodImg} alt="mobileImg" />
+          <img
+            data-aos="fade-right"
+            className="mobileImg"
+            src={FoodImg}
+            alt="mobileImg"
+          />
         </div>
         <div className="desktopImgContainer">
-          <img className="desktopImg1" src={marioAndAdrian1} alt="desktopImg" />
-          <img className="desktopImg2" src={marioAndAdrian2} alt="desktopImg" />
-          <img className="desktopImg3" src={restaurantChef} alt="desktopImg" />
-          <img className="desktopImg4" src={restaurantImg} alt="desktopImg" />
+          <img
+            data-aos="fade-right"
+            className="desktopImg1"
+            src={marioAndAdrian1}
+            alt="desktopImg"
+          />
+          <img
+            data-aos="fade-right"
+            className="desktopImg2"
+            src={marioAndAdrian2}
+            alt="desktopImg"
+          />
+          <img
+            data-aos="fade-right"
+            className="desktopImg3"
+            src={restaurantChef}
+            alt="desktopImg"
+          />
+          <img
+            data-aos="fade-right"
+            className="desktopImg4"
+            src={restaurantImg}
+            alt="desktopImg"
+          />
         </div>
         <Link className="LinkClassName" to="/Order">
-          <button className="mainButton">Reserve a table</button>
+          <button data-aos="fade-right" className="mainButton">
+            Reserve a table
+          </button>
         </Link>
       </div>
       <div className="menuContainer">
         <h1 className="mainOrderTitle">ORDER FOR DELIVERY!</h1>
-        <div className="mainScrollMenu">
-          <button className="buttonCategories">Specials</button>
-          <button className="buttonCategories">Starters</button>
-          <button className="buttonCategories">Main</button>
-          <button className="buttonCategories">Desserts</button>
-          <button className="buttonCategories">Drinks</button>
-        </div>
+          <MainScrollMenu />
         <ArticleCards />
       </div>
     </main>
