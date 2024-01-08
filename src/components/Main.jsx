@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 import MainScrollMenu from "./MainScrollMenu";
 
 const Main = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
     AOS.init({
@@ -23,7 +23,7 @@ const Main = () => {
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-  }
+  };
 
   return (
     <main>
@@ -80,8 +80,8 @@ const Main = () => {
       </div>
       <div className="menuContainer">
         <h1 className="mainOrderTitle">ORDER FOR DELIVERY!</h1>
-          <MainScrollMenu onSelectCategory={handleCategoryClick} />
-        <ArticleCards category={selectedCategory}/>
+        <MainScrollMenu onSelectCategory={handleCategoryClick} />
+        <ArticleCards category={selectedCategory} />
       </div>
     </main>
   );
