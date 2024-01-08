@@ -72,7 +72,7 @@ const Main = () => {
             alt="desktopImg"
           />
         </div>
-        <Link className="LinkClassName" to="/Order">
+        <Link className="LinkClassName" to="/Booking">
           <button data-aos="fade-right" className="mainButton">
             Reserve a table
           </button>

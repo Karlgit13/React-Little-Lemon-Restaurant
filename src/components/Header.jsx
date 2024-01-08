@@ -28,6 +28,7 @@ const Header = () => {
         window.removeEventListener("scroll", controlNavbar);
       };
     }
+    // eslint-disable-next-line
   }, [lastScrollY]);
 
   useEffect(() => {
