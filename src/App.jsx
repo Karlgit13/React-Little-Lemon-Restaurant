@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import BookingPage from "./components/BookingPage";
-import ConfirmPage from "./components/ConfirmPage";
-import BookingComplete from "./components/BookingComplete";
-import Order from "./components/Order";
-import Contact from "./components/Contact";
+import Header from "./components/Header-Nav/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
+import BookingPage from "./components/Booking/BookingPage";
+import ConfirmPage from "./components/Booking/ConfirmPage";
+import BookingComplete from "./components/Booking/BookingComplete";
+import Order from "./components/Order/Order";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (

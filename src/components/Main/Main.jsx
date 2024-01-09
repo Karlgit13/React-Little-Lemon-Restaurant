@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./main.css";
-import FoodImg from "../assets/restauranfood.jpg";
+import FoodImg from "../../assets/restauranfood.jpg";
 import ArticleCards from "./ArticleCards";
-import marioAndAdrian1 from "../assets/Mario and Adrian A.jpg";
-import marioAndAdrian2 from "../assets/Mario and Adrian b.jpg";
-import restaurantChef from "../assets/restaurant chef B.jpg";
-import restaurantImg from "../assets/restaurant.jpg";
+import marioAndAdrian1 from "../../assets/Mario and Adrian A.jpg";
+import marioAndAdrian2 from "../../assets/Mario and Adrian b.jpg";
+import restaurantChef from "../../assets/restaurant chef B.jpg";
+import restaurantImg from "../../assets/restaurant.jpg";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";

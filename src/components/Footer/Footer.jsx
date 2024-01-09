@@ -1,8 +1,8 @@
 import React from "react";
 import "./footer.css";
-import fbLogo from "../assets/facebook.png";
-import instaLogo from "../assets/instagram.png";
-import twitterLogo from "../assets/twitter.png";
+import fbLogo from "../../assets/facebook.png";
+import instaLogo from "../../assets/instagram.png";
+import twitterLogo from "../../assets/twitter.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {

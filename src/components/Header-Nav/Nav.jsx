@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./nav.css";
-import homeLogo from "../assets/homehome.png";
-import orderLogo from "../assets/order-noww.png";
-import bookingLogo from "../assets/calendar.png";
-import contactLogo from "../assets/email.png";
+import homeLogo from "../../assets/homehome.png";
+import orderLogo from "../../assets/order-noww.png";
+import bookingLogo from "../../assets/calendar.png";
+import contactLogo from "../../assets/email.png";
 
 const Nav = ({ isVisible }) => {
   const navClass = isVisible ? "nav" : "nav hidden";

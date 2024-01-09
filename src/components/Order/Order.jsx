@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ArticleCards from "./ArticleCards";
+import ArticleCards from "../Main/ArticleCards";
 import "./order.css";
-import MainScrollMenu from "./MainScrollMenu";
+import MainScrollMenu from "../Main/MainScrollMenu";
 
 const Order = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");

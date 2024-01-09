@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./header.css";
-import Logo from "../assets/Logo2.svg";
-import BurgerMenu from "../assets/hamburger_menu.svg";
-import Basket from "../assets/Basket.svg";
+import Logo from "../../assets/Logo2.svg";
+import BurgerMenu from "../../assets/hamburger_menu.svg";
+import Basket from "../../assets/Basket.svg";
 import Nav from "./Nav";
 import { Link } from "react-router-dom";
 

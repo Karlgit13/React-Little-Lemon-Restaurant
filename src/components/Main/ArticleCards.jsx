@@ -1,12 +1,12 @@
 import React from "react";
 import "./articleCards.css";
-import greekSalad from "../assets/greek salad.jpg";
-import brushetta from "../assets/brushettaIMG.png";
-import grilledFish from "../assets/grilledFish.png";
-import pasta from "../assets/pasta.png";
-import lemonDessert from "../assets/lemon dessert.jpg";
-import Mojito from "../assets/mojito.png";
-import Chocolate from "../assets/chocolate.png";
+import greekSalad from "../../assets/greek salad.jpg";
+import brushetta from "../../assets/brushettaIMG.png";
+import grilledFish from "../../assets/grilledFish.png";
+import pasta from "../../assets/pasta.png";
+import lemonDessert from "../../assets/lemon dessert.jpg";
+import Mojito from "../../assets/mojito.png";
+import Chocolate from "../../assets/chocolate.png";
 
 const ArticleCards = ({ category }) => {
   const MENU_ITEMS = {
