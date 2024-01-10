@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
-import fakeAPI, { fetchAPI } from "../../utils/fakeAPI";
+import { fetchAPI } from "../../utils/fakeAPI";
+import { useNavigate } from "react-router-dom";
 
-const BookingForm = () => {
-  const [date, setDate] = useState("");
-  const [guests, setGuests] = useState(1);
-  const [occasion, setOccasion] = useState("Birthday");
-  const [selectedTime, setSelectedTime] = useState("");
-  // uppdaterad att hämta från fakeAPI
+const BookingForm = ({ dispatch, formData }) => {
   const [availableTimes, setAvailableTimes] = useState([]);
+  const navigate = useNavigate();
 
-  // Hämtar tillgängliga tider när komponenten monteras
   useEffect(() => {
     initializeTimes();
   }, []);
@@ -20,52 +16,48 @@ const BookingForm = () => {
     setAvailableTimes(times);
   };
 
-  const updateTimes = (newDate) => {
-    const times = fetchAPI(new Date(newDate));
-    setAvailableTimes(times);
-  };
+  // const updateTimes = (newDate) => {
+  //   const times = fetchAPI(new Date(newDate));
+  //   setAvailableTimes(times);
+  // };
 
   const handleDateChange = (event) => {
-    const newDate = event.target.value;
-    setDate(newDate);
-    updateTimes(newDate);
+    dispatch({ type: "SET_DATE", payload: event.target.value });
   };
 
   const handleGuestsChange = (event) => {
-    setGuests(event.target.value);
+    dispatch({ type: "SET_GUESTS", payload: event.target.value });
   };
 
   const handleOccasionChange = (event) => {
-    setOccasion(event.target.value);
+    dispatch({ type: "SET_OCCASION", payload: event.target.value });
   };
 
   const handleTimeChange = (event) => {
-    setSelectedTime(event.target.value);
+    dispatch({ type: "SET_SELECTED_TIME", payload: event.target.value });
   };
 
-  const submitForm = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
+    navigate("/confirmPage", { state: { formData } });
   };
 
   return (
     <div className="booking">
-      <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
+      <form
+        onSubmit={handleSubmit}
+        style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
+      >
         <label htmlFor="res-date">Choose date</label>
-        <input
-          value={date}
-          onChange={handleDateChange}
-          type="date"
-          id="res-date"
-        />
+        <input onChange={handleDateChange} type="date" id="res-date" />
         <label htmlFor="res-time">Choose time</label>
-        <select value={selectedTime} onChange={handleTimeChange} id="res-time">
+        <select onChange={handleTimeChange} id="res-time">
           {availableTimes.map((time) => (
             <option key={time}>{time}</option>
           ))}
         </select>
         <label htmlFor="guests">Number of guests</label>
         <input
-          value={guests}
           onChange={handleGuestsChange}
           type="number"
           placeholder="1"
@@ -74,11 +66,11 @@ const BookingForm = () => {
           id="guests"
         />
         <label htmlFor="occasion">Occasion</label>
-        <select value={occasion} onChange={handleOccasionChange} id="occasion">
+        <select onChange={handleOccasionChange} id="occasion">
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
-        <input type="submit" value={submitForm} />
+        <input type="submit" />
       </form>
     </div>
   );
