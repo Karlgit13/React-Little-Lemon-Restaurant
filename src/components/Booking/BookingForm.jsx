@@ -1,21 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import fakeAPI, { fetchAPI } from "../../utils/fakeAPI";
 
 const BookingForm = () => {
   const [date, setDate] = useState("");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
   const [selectedTime, setSelectedTime] = useState("");
-  const availableTimes = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ])[0];
+  // uppdaterad att hämta från fakeAPI
+  const [availableTimes, setAvailableTimes] = useState([]);
+
+  // Hämtar tillgängliga tider när komponenten monteras
+  useEffect(() => {
+    initializeTimes();
+  }, []);
+
+  const initializeTimes = () => {
+    const today = new Date();
+    const times = fetchAPI(today);
+    setAvailableTimes(times);
+  };
+
+  const updateTimes = (newDate) => {
+    const times = fetchAPI(new Date(newDate));
+    setAvailableTimes(times);
+  };
 
   const handleDateChange = (event) => {
-    setDate(event.target.value);
+    const newDate = event.target.value;
+    setDate(newDate);
+    updateTimes(newDate);
   };
 
   const handleGuestsChange = (event) => {
@@ -28,6 +41,10 @@ const BookingForm = () => {
 
   const handleTimeChange = (event) => {
     setSelectedTime(event.target.value);
+  };
+
+  const submitForm = (event) => {
+    event.preventDefault();
   };
 
   return (
@@ -61,7 +78,7 @@ const BookingForm = () => {
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
-        <input type="submit" value="Make Your reservation" />
+        <input type="submit" value={submitForm} />
       </form>
     </div>
   );
