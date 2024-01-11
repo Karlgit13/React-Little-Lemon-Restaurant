@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { fetchAPI } from "../../utils/fakeAPI";
 import { useNavigate } from "react-router-dom";
 
+
+
 const BookingForm = ({ dispatch, formData }) => {
   const [availableTimes, setAvailableTimes] = useState([]);
+  const [isValid, setIsValid] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,13 +19,27 @@ const BookingForm = ({ dispatch, formData }) => {
     setAvailableTimes(times);
   };
 
-  // const updateTimes = (newDate) => {
-  //   const times = fetchAPI(new Date(newDate));
-  //   setAvailableTimes(times);
-  // };
+  const formatDate = (date) => {
+    return date.toISOString().split("T")[0];
+  };
+
+  const updateTimes = (newDate) => {
+    const selectedDate = new Date(newDate);
+    const today = new Date();
+    const noTimes = "No times available, please try another Date.";
+
+    if (formatDate(selectedDate) >= formatDate(today)) {
+      const times = fetchAPI(selectedDate);
+      setAvailableTimes(times);
+    } else {
+      setAvailableTimes([noTimes]);
+    }
+  };
 
   const handleDateChange = (event) => {
-    dispatch({ type: "SET_DATE", payload: event.target.value });
+    const newDate = event.target.value;
+    dispatch({ type: "SET_DATE", payload: newDate });
+    updateTimes(newDate);
   };
 
   const handleGuestsChange = (event) => {
@@ -42,9 +59,24 @@ const BookingForm = ({ dispatch, formData }) => {
     navigate("/confirmPage", { state: { formData } });
   };
 
+  const validateForm = () => {
+    const { date, guests } = formData;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const selectedDate = new Date(date);
+    selectedDate.setHours(0, 0, 0, 0);
+
+    const isDateValid = selectedDate >= today;
+    const isGuestsValid = guests >= 1 && guests <= 10;
+
+    setIsValid(isDateValid && isGuestsValid);
+  };
+
   return (
     <div className="booking">
       <form
+        onChange={validateForm}
         onSubmit={handleSubmit}
         style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
       >
@@ -70,7 +102,7 @@ const BookingForm = ({ dispatch, formData }) => {
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
-        <input type="submit" />
+        <input type="submit" disabled={!isValid} />
       </form>
     </div>
   );
