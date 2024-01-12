@@ -12,18 +12,22 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Main />} />
-        <Route path="/order" element={<Order />} />
-        <Route path="/booking" element={<BookingPage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/confirmPage" element={<ConfirmPage />} />
-        <Route path="/bookingComplete" element={<BookingComplete />} />
-        {/* Add additional routes here */}
-      </Routes>
-      <Footer />
+    <div className="site-container">
+      <div className="content-wrapper">
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Main />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/booking" element={<BookingPage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/confirmPage" element={<ConfirmPage />} />
+          <Route path="/bookingComplete" element={<BookingComplete />} />
+          {/* Add additional routes here */}
+        </Routes>
+      </div>
+      <footer className="footer">
+        <Footer />
+      </footer>
     </div>
   );
 }

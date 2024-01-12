@@ -279,6 +279,7 @@
   }
 
   .mainOrderTitle {
+    text-align: center;
     margin: 5px 0px;
     font-family: "Karla";
     font-weight: 600;

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchAPI } from "../../utils/fakeAPI";
 import { useNavigate } from "react-router-dom";
-
-
+import "./booking.css";
 
 const BookingForm = ({ dispatch, formData }) => {
   const [availableTimes, setAvailableTimes] = useState([]);

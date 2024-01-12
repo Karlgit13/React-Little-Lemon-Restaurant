@@ -11,7 +11,7 @@ const Order = () => {
   };
   return (
     <>
-      <div>
+      <div className="orderContainer">
         <MainScrollMenu onSelectCategory={handleCategoryClick} />
         <ArticleCards category={selectedCategory} />
       </div>

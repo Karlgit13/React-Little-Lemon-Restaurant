@@ -83,7 +83,9 @@ const Main = () => {
         </Link>
       </div>
       <div className="menuContainer">
-        <h1 className="mainOrderTitle">ORDER FOR DELIVERY!</h1>
+        <h1 className="mainOrderTitle">
+          Order for delivery!
+        </h1>
         <MainScrollMenu onSelectCategory={handleCategoryClick} />
         <ArticleCards category={selectedCategory} />
       </div>

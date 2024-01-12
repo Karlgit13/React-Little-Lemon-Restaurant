@@ -1,12 +1,12 @@
 import React from "react";
 import "./articleCards.css";
-import greekSalad from "../../assets/greek salad.jpg";
 import brushetta from "../../assets/brushettaIMG.png";
 import grilledFish from "../../assets/grilledFish.png";
 import pasta from "../../assets/pasta.png";
 import lemonDessert from "../../assets/lemon dessert.jpg";
 import Mojito from "../../assets/mojito.png";
 import Chocolate from "../../assets/chocolate.png";
+import GreekSaladNew from "../../assets/GreekSalladNew.png";
 
 const ArticleCards = ({ category }) => {
   const MENU_ITEMS = {
@@ -27,7 +27,7 @@ const ArticleCards = ({ category }) => {
     Starters: [
       {
         title: "Greek salad",
-        image: greekSalad,
+        image: GreekSaladNew,
         description:
           "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
       },
@@ -77,7 +77,7 @@ const ArticleCards = ({ category }) => {
     All: [
       {
         title: "Greek salad",
-        image: greekSalad,
+        image: GreekSaladNew,
         description:
           "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
       },
@@ -134,11 +134,13 @@ const ArticleCards = ({ category }) => {
     <article>
       <div className="articleCardsContainer">
         {menuItems.map((item, index) => (
-          <section key={index}>
-            <h1 className="cardTitle">{item.title}</h1>
+          <section className="cardSection" key={index}>
+            <div>
+              <h1 className="cardTitle">{item.title}</h1>
+              <p className="cardDesc">{item.description}</p>
+            </div>
             <div className={`card card${index}`}>
               <img className="cardImg" src={item.image} alt={item.title} />
-              <p className="cardDesc">{item.description}</p>
             </div>
           </section>
         ))}
