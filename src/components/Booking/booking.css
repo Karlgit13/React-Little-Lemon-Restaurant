@@ -1,0 +1,14 @@
+.booking-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #495e57;
+    padding: 32px;
+    
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

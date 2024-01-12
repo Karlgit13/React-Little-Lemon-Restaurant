@@ -25,7 +25,7 @@ const BookingForm = ({ dispatch, formData }) => {
   const updateTimes = (newDate) => {
     const selectedDate = new Date(newDate);
     const today = new Date();
-    const noTimes = "No times available, please try another Date.";
+    const noTimes = "Try another Date";
 
     if (formatDate(selectedDate) >= formatDate(today)) {
       const times = fetchAPI(selectedDate);
@@ -73,11 +73,11 @@ const BookingForm = ({ dispatch, formData }) => {
   };
 
   return (
-    <section className="booking">
+    <div className="booking-form-container">
       <form
         onChange={validateForm}
         onSubmit={handleSubmit}
-        style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
+        className="booking-form"
       >
         <label htmlFor="res-date">Choose date</label>
         <input onChange={handleDateChange} type="date" id="res-date" />
@@ -103,7 +103,7 @@ const BookingForm = ({ dispatch, formData }) => {
         </select>
         <input type="submit" disabled={!isValid} />
       </form>
-    </section>
+    </div>
   );
 };
 

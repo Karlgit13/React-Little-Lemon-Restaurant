@@ -1,19 +1,14 @@
-import React, { useState } from "react";
-import ArticleCards from "../Main/ArticleCards";
+import React from "react";
+
 import "./order.css";
-import MainScrollMenu from "../Main/MainScrollMenu";
+
+import Main from "../Main/Main";
 
 const Order = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
-  };
   return (
     <>
       <div className="orderContainer">
-        <MainScrollMenu onSelectCategory={handleCategoryClick} />
-        <ArticleCards category={selectedCategory} />
+        <Main />
       </div>
     </>
   );

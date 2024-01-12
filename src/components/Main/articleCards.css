@@ -75,7 +75,7 @@
     flex-wrap: wrap;
   }
 
-  section {
+  .cardSection {
     margin: 8px;
     background-color: #495e57;
     border: 1px solid black;
@@ -84,7 +84,7 @@
     min-width: 200px;
   }
 
-  section:hover {
+  .cardSection:hover {
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
     cursor: pointer;

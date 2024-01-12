@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import BookingForm from "./BookingForm";
+import BookingForm from "../components/Booking/BookingForm";
 import { BrowserRouter } from "react-router-dom";
-import validateGuests from "./testfile";
+import validateGuests from "../components/Booking/testfile";
 
 // test guests
 describe("max and min guests attributes", () => {
