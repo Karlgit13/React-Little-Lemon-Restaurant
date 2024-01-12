@@ -74,7 +74,7 @@ const BookingForm = ({ dispatch, formData }) => {
   };
 
   return (
-    <div className="booking">
+    <section className="booking">
       <form
         onChange={validateForm}
         onSubmit={handleSubmit}
@@ -99,12 +99,12 @@ const BookingForm = ({ dispatch, formData }) => {
         />
         <label htmlFor="occasion">Occasion</label>
         <select onChange={handleOccasionChange} id="occasion">
-          <option>Birthday</option>
-          <option>Anniversary</option>
+          <option value="option1">Birthday</option>
+          <option value="option2">Anniversary</option>
         </select>
         <input type="submit" disabled={!isValid} />
       </form>
-    </div>
+    </section>
   );
 };
 

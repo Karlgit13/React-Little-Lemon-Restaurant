@@ -43,7 +43,7 @@ const Main = () => {
             data-aos="fade-right"
             className="mobileImg"
             src={FoodImg}
-            alt="mobileImg"
+            alt="Food"
           />
         </div>
         <div className="desktopImgContainer">
@@ -51,29 +51,33 @@ const Main = () => {
             data-aos="fade-right"
             className="desktopImg1"
             src={marioAndAdrian1}
-            alt="desktopImg"
+            alt="Mario and Adrian first"
           />
           <img
             data-aos="fade-right"
             className="desktopImg2"
             src={marioAndAdrian2}
-            alt="desktopImg"
+            alt="Mario and Adrian second"
           />
           <img
             data-aos="fade-right"
             className="desktopImg3"
             src={restaurantChef}
-            alt="desktopImg"
+            alt="Restaurant Chef"
           />
           <img
             data-aos="fade-right"
             className="desktopImg4"
             src={restaurantImg}
-            alt="desktopImg"
+            alt="Restaurant outdoor Tables"
           />
         </div>
-        <Link className="LinkClassName" to="/Booking">
-          <button data-aos="fade-right" className="mainButton">
+        <Link aria-label="Book a Table" className="LinkClassName" to="/Booking">
+          <button
+            aria-label="Book a Table"
+            data-aos="fade-right"
+            className="mainButton"
+          >
             Reserve a table
           </button>
         </Link>

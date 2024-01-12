@@ -54,13 +54,17 @@ const Header = () => {
   return (
     <header>
       <div className="header">
-        <button onClick={toggleNav} className="burgerButton">
-          <img src={BurgerMenu} alt="burgerMenu" />
+        <button
+          aria-label="Toggle Navbar"
+          onClick={toggleNav}
+          className="burgerButton"
+        >
+          <img src={BurgerMenu} alt="Toggle Menu" />
         </button>
-        <Link to="/">
-          <img className="headerLogo" src={Logo} alt="logo" />
+        <Link aria-label="Home" to="/">
+          <img className="headerLogo" src={Logo} alt="Logo" />
         </Link>
-        <button className="basketButton">
+        <button aria-label="Toggle Basket" className="basketButton">
           <img src={Basket} alt="basket" />
         </button>
       </div>

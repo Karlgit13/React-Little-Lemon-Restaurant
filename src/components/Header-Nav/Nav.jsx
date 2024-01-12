@@ -13,23 +13,23 @@ const Nav = ({ isVisible }) => {
     <nav className={navClass}>
       <ul>
         <li>
-          <Link to="/">
-            <img className="navLogos" src={homeLogo} alt="homeLogo" />
+          <Link aria-label="Home" to="/">
+            <img className="navLogos" src={homeLogo} alt="Home" />
           </Link>
         </li>
         <li>
-          <Link to="/Order">
-            <img className="navLogos" src={orderLogo} alt="orderLogo" />
+          <Link aria-label="Order Food" to="/Order">
+            <img className="navLogos" src={orderLogo} alt="Order" />
           </Link>
         </li>
         <li>
-          <Link to="/Booking">
-            <img className="navLogos" src={bookingLogo} alt="bookingLogo" />
+          <Link aria-label="Book a Table" to="/Booking">
+            <img className="navLogos" src={bookingLogo} alt="Booking" />
           </Link>
         </li>
         <li>
-          <Link to="/Contact">
-            <img className="navLogos" src={contactLogo} alt="contactLogo" />
+          <Link aria-label="Contact Us" to="/Contact">
+            <img className="navLogos" src={contactLogo} alt="Contact" />
           </Link>
         </li>
       </ul>

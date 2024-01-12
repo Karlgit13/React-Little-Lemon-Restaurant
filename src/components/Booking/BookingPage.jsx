@@ -26,9 +26,9 @@ const BookingPage = () => {
 
   return (
     <div>
-      <div>
+      <section>
         <BookingForm formData={formData} dispatch={dispatch} />
-      </div>
+      </section>
     </div>
   );
 };

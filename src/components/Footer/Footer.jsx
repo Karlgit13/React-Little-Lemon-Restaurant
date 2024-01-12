@@ -11,15 +11,15 @@ const Footer = () => {
       <div className="doormatNavigation">
         <h1 className="footerTitle">Navigation</h1>
         <ul className="footerUl">
-          <Link to="/">
+          <Link aria-label="Home" to="/">
             <li>Home</li>
           </Link>
           <br />
-          <Link to="/order">
+          <Link aria-label="Order Food" to="/order">
             <li>Order now</li>
           </Link>
           <br />
-          <Link to="/booking">
+          <Link aria-label="Book a Table" to="/booking">
             <li>Reserve a table</li>
           </Link>
         </ul>
@@ -31,20 +31,22 @@ const Footer = () => {
           <br />
           <li>0101010101.</li>
           <br />
-          <li>LemonRestaurant <br /> @example.com.</li>
+          <li>
+            LemonRestaurant <br /> @example.com.
+          </li>
         </ul>
       </div>
       <div className="socialMediaLinks">
         <h1 className="footerTitle">@Socials</h1>
         <ul className="footerUl">
           <li>
-            <img className="socialsLogo" src={fbLogo} alt="fbLogo" />
+            <img className="socialsLogo" src={fbLogo} alt="Facebook Logo" />
           </li>
           <li>
-            <img className="socialsLogo" src={instaLogo} alt="instaLogo" />
+            <img className="socialsLogo" src={instaLogo} alt="Instagram Logo" />
           </li>
           <li>
-            <img className="socialsLogo" src={twitterLogo} alt="twitterLogo" />
+            <img className="socialsLogo" src={twitterLogo} alt="twitter Logo" />
           </li>
         </ul>
       </div>
