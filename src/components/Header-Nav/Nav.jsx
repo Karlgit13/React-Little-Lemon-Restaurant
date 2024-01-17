@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./nav.css";
 import homeLogo from "../../assets/homehome.png";
 import orderLogo from "../../assets/order-noww.png";
@@ -8,6 +8,23 @@ import contactLogo from "../../assets/email.png";
 
 const Nav = ({ isVisible }) => {
   const navClass = isVisible ? "nav" : "nav hidden";
+  const navigate = useNavigate();
+
+  const scrollToMenu = (e) => {
+    e.preventDefault();
+    const menuContainer = document.querySelector(".menuContainer");
+    if (menuContainer) {
+      menuContainer.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/Order");
+
+      setTimeout(() => {
+        document
+          .querySelector(".menuContainer")
+          .scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    }
+  };
 
   return (
     <nav className={navClass}>
@@ -18,7 +35,7 @@ const Nav = ({ isVisible }) => {
           </Link>
         </li>
         <li>
-          <Link aria-label="Order Food" to="/Order">
+          <Link aria-label="Order Food" to="/Order" onClick={scrollToMenu}>
             <img className="navLogos" src={orderLogo} alt="Order" />
           </Link>
         </li>
