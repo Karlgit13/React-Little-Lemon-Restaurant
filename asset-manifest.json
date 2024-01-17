@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/React-Little-Lemon-Restaurant/static/css/main.011bd81a.css",
+    "main.js": "/React-Little-Lemon-Restaurant/static/js/main.612e79a7.js",
+    "static/js/787.fae78d00.chunk.js": "/React-Little-Lemon-Restaurant/static/js/787.fae78d00.chunk.js",
+    "static/media/Mario and Adrian A.jpg": "/React-Little-Lemon-Restaurant/static/media/Mario and Adrian A.7f44c6d6e341a27d14b3.jpg",
+    "static/media/Mario and Adrian b.jpg": "/React-Little-Lemon-Restaurant/static/media/Mario and Adrian b.6ba0e06bfa9c1ea75109.jpg",
+    "static/media/restaurant chef B.jpg": "/React-Little-Lemon-Restaurant/static/media/restaurant chef B.4b4c2d26b514db32e8fc.jpg",
+    "static/media/restauranfood.jpg": "/React-Little-Lemon-Restaurant/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
+    "static/media/brushettaIMG.png": "/React-Little-Lemon-Restaurant/static/media/brushettaIMG.feb9227220db54c5e929.png",
+    "static/media/GreekSalladNew.png": "/React-Little-Lemon-Restaurant/static/media/GreekSalladNew.11bb29f8bb4492e9e4e7.png",
+    "static/media/grilledFish.png": "/React-Little-Lemon-Restaurant/static/media/grilledFish.63303a9f06f983e7ba29.png",
+    "static/media/pasta.png": "/React-Little-Lemon-Restaurant/static/media/pasta.00255c6dc539de0ce647.png",
+    "static/media/chocolate.png": "/React-Little-Lemon-Restaurant/static/media/chocolate.9c3b003a5b48f68f6c8f.png",
+    "static/media/mojito.png": "/React-Little-Lemon-Restaurant/static/media/mojito.86a880d1ab79f4613142.png",
+    "static/media/restaurant.jpg": "/React-Little-Lemon-Restaurant/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
+    "static/media/MarkaziText.ttf": "/React-Little-Lemon-Restaurant/static/media/MarkaziText.526f74ab0f94c23b4047.ttf",
+    "static/media/Karla.ttf": "/React-Little-Lemon-Restaurant/static/media/Karla.1d835e644ae4118a28fc.ttf",
+    "static/media/Logo2.svg": "/React-Little-Lemon-Restaurant/static/media/Logo2.f72c913c48c5334f78f2c336ec36f22b.svg",
+    "static/media/order-noww.png": "/React-Little-Lemon-Restaurant/static/media/order-noww.d953b0a268c6390b50b5.png",
+    "static/media/email.png": "/React-Little-Lemon-Restaurant/static/media/email.79f5cd1d79c1e42b71da.png",
+    "static/media/calendar.png": "/React-Little-Lemon-Restaurant/static/media/calendar.0a289d6d7ed2b9190fe5.png",
+    "index.html": "/React-Little-Lemon-Restaurant/index.html",
+    "static/media/Basket.svg": "/React-Little-Lemon-Restaurant/static/media/Basket.fae9b50adb46a3bfa9273d6c25dc3935.svg",
+    "static/media/hamburger_menu.svg": "/React-Little-Lemon-Restaurant/static/media/hamburger_menu.0da6f67ced800ab909f63d5144de37ee.svg",
+    "main.011bd81a.css.map": "/React-Little-Lemon-Restaurant/static/css/main.011bd81a.css.map",
+    "main.612e79a7.js.map": "/React-Little-Lemon-Restaurant/static/js/main.612e79a7.js.map",
+    "787.fae78d00.chunk.js.map": "/React-Little-Lemon-Restaurant/static/js/787.fae78d00.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.011bd81a.css",
+    "static/js/main.612e79a7.js"
+  ]
+}
