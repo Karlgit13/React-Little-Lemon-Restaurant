@@ -1,7 +1,3 @@
-Step 1: Either Clone/fork or Download repository.
+LIVE DEMO:
 
-Step 2: npm install
-
-Step 3: npm start
-
-My first project, would love some feedback.
+https://karlgit13.github.io/React-Little-Lemon-Restaurant/
