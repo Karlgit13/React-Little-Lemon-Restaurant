@@ -79,16 +79,32 @@ const BookingForm = ({ dispatch, formData }) => {
         onSubmit={handleSubmit}
         className="booking-form"
       >
-        <label htmlFor="res-date">Choose date</label>
-        <input onChange={handleDateChange} type="date" id="res-date" />
-        <label htmlFor="res-time">Choose time</label>
-        <select onChange={handleTimeChange} id="res-time">
+        <label className="form-label" htmlFor="res-date">
+          Choose date
+        </label>
+        <input
+          className="form-input"
+          onChange={handleDateChange}
+          type="date"
+          id="res-date"
+        />
+        <label className="form-label" htmlFor="res-time">
+          Choose time
+        </label>
+        <select
+          className="form-input"
+          onChange={handleTimeChange}
+          id="res-time"
+        >
           {availableTimes.map((time) => (
             <option key={time}>{time}</option>
           ))}
         </select>
-        <label htmlFor="guests">Number of guests</label>
+        <label className="form-label" htmlFor="guests">
+          Number of guests
+        </label>
         <input
+          className="form-input"
           onChange={handleGuestsChange}
           type="number"
           placeholder="1"
@@ -96,12 +112,22 @@ const BookingForm = ({ dispatch, formData }) => {
           max="10"
           id="guests"
         />
-        <label htmlFor="occasion">Occasion</label>
-        <select onChange={handleOccasionChange} id="occasion">
-          <option value="option1">Birthday</option>
-          <option value="option2">Anniversary</option>
+        <label className="form-label" htmlFor="occasion">
+          Occasion
+        </label>
+        <select
+          className="form-input"
+          onChange={handleOccasionChange}
+          id="occasion"
+        >
+          <option className="form-input" value="option1">
+            Birthday
+          </option>
+          <option className="form-input" value="option2">
+            Anniversary
+          </option>
         </select>
-        <input type="submit" disabled={!isValid} />
+        <input className="form-button" type="submit" disabled={!isValid} />
       </form>
     </div>
   );

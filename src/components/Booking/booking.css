@@ -1,14 +1,68 @@
 .booking-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #495e57;
-    padding: 32px;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #495e57;
+  padding: 32px;
 }
 
 .booking-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  width: 50vh;
+}
+
+.form-label {
+  text-align: left;
+  font-family: "MarkaziText";
+  font-size: 2.7vh;
+  color: #f4ce14;
+  font-weight: 400;
+  text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.form-input {
+  text-align: left;
+  padding: 1vh;
+  color: #000;
+}
+
+.form-button {
+  padding: 1vh;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.confirm-title {
+  font-family: "MarkaziText";
+  margin-top: 10vh;
+  color: #f4ce14;
+  text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+  font-weight: 300;
+  font-size: 4vh;
+}
+
+.booking-confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  font-family: "Karla";
+  font-size: 2vh;
+  background-color: #495e57;
+  color: #edefee;
+}
+
+.confirm-button {
+  padding: 1vh;
+  margin-bottom: 12vh;
+  margin-top: 5vh;
+  font-size: 2vh;
+  font-family: "Karla";
+  font-weight: 500;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 50vh;
 }
