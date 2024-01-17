@@ -2,10 +2,12 @@
   "name": "littlelemonrestaurant",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://karlgit13.github.io/React-Little-Lemon-Restaurant",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1",
@@ -16,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -37,11 +41,11 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^14.1.2",
-    "jest": "^27.5.1",
     "@babel/core": "^7.16.12",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "@babel/plugin-proposal-private-property-in-object": "^7.16.12"
+    "@testing-library/react": "^14.1.2",
+    "jest": "^27.5.1"
   }
 }

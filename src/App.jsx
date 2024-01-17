@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Header from "./components/Header-Nav/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
@@ -16,13 +16,14 @@ function App() {
       <div className="content-wrapper">
         <Header />
         <Routes>
-          <Route exact path="/" element={<Main />} />
+          <Route path="/" element={<Main />} />
           <Route path="/order" element={<Order />} />
           <Route path="/booking" element={<BookingPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/confirmPage" element={<ConfirmPage />} />
           <Route path="/bookingComplete" element={<BookingComplete />} />
-          {/* Add additional routes here */}
+          {/* Redirect all other paths to the main page */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
       <footer className="footer">
