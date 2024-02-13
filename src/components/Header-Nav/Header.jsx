@@ -5,18 +5,20 @@ import BurgerMenu from "../../assets/hamburger_menu.svg";
 import Basket from "../../assets/Basket.svg";
 import Nav from "./Nav";
 import { Link } from "react-router-dom";
+import { useCart } from "../../Contexts/CartContext";
 
 const Header = () => {
   const [navVisible, setNavVisible] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0); // Håller koll på senaste scroll position
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const { cartItems } = useCart();
+  const itemCount = cartItems.length;
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY) {
-        // Om scrollningen är nedåt
-        setNavVisible(true); // Dölj navigationsbaren
+        setNavVisible(true);
       }
-      setLastScrollY(window.scrollY); // Uppdatera den senaste scroll positionen
+      setLastScrollY(window.scrollY);
     }
   };
 
@@ -67,6 +69,9 @@ const Header = () => {
         <Link to="/Cart">
           <button aria-label="Toggle Basket" className="basketButton">
             <img src={Basket} alt="basket" />
+            {itemCount > 0 && (
+              <span className="itemCountStyle">{itemCount}</span>
+            )}
           </button>
         </Link>
       </div>

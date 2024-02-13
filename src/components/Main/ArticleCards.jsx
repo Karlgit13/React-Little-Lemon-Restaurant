@@ -7,6 +7,7 @@ import lemonDessert from "../../assets/lemon dessert.jpg";
 import Mojito from "../../assets/mojito.png";
 import Chocolate from "../../assets/chocolate.png";
 import GreekSaladNew from "../../assets/GreekSalladNew.png";
+import { useCart } from "../../Contexts/CartContext";
 
 function randomPrice(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -19,7 +20,6 @@ const ArticleCards = ({ category }) => {
         title: "Grilled Fish",
         image: grilledFish,
         price: randomPrice(5, 20),
-
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed cursus...",
       },
@@ -142,6 +142,7 @@ const ArticleCards = ({ category }) => {
   };
 
   const menuItems = MENU_ITEMS[category];
+  const { addToCart } = useCart();
 
   if (!menuItems) {
     return (
@@ -164,7 +165,9 @@ const ArticleCards = ({ category }) => {
             </div>
             <div className="priceAndCart">
               <h1 className="item-price">${item.price}</h1>
-              <button className="cart-button">ADD TO CART</button>
+              <button onClick={() => addToCart(item)} className="cart-button">
+                ADD TO CART
+              </button>
             </div>
           </section>
         ))}

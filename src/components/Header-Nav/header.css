@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 4px;
+  margin: 6px 5px;
 }
 
 .burgerButton {
@@ -11,12 +12,26 @@
   border: none;
   cursor: pointer;
 }
-
+.itemCountStyle {
+  position: absolute;
+  top: -4px;
+  right: -3px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
 .basketButton {
   z-index: 999;
   background: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
 .basketButton:hover {
