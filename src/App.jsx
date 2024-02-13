@@ -9,6 +9,7 @@ import ConfirmPage from "./components/Booking/ConfirmPage";
 import BookingComplete from "./components/Booking/BookingComplete";
 import Order from "./components/Order/Order";
 import Contact from "./components/Contact/Contact";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/confirmPage" element={<ConfirmPage />} />
           <Route path="/bookingComplete" element={<BookingComplete />} />
+          <Route path="/Cart" element={<Cart />} />
           {/* Redirect all other paths to the main page */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

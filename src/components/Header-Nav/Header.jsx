@@ -64,9 +64,11 @@ const Header = () => {
         <Link aria-label="Home" to="/">
           <img className="headerLogo" src={Logo} alt="Logo" />
         </Link>
-        <button aria-label="Toggle Basket" className="basketButton">
-          <img src={Basket} alt="basket" />
-        </button>
+        <Link to="/Cart">
+          <button aria-label="Toggle Basket" className="basketButton">
+            <img src={Basket} alt="basket" />
+          </button>
+        </Link>
       </div>
       <Nav isVisible={navVisible} />
     </header>

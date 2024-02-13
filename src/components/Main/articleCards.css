@@ -1,17 +1,17 @@
 /* MOBILE - VIEW */
 
 @media (max-width: 992px) {
-  .articleCardsContainer {
+  /* .articleCardsContainer {
+    width: 90vw;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding: 16px;
     border: 1px solid white;
     border-radius: 8px;
     margin-top: 16px;
     background: #495e57;
     margin-bottom: 12px;
-    max-width: 380px;
   }
 
   .cardTitle {
@@ -54,15 +54,148 @@
 
   .cardSection {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: auto;
     border-bottom: 1px solid #edefee;
+  }
+
+  .priceAndCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0px;
+  }
+  .item-price {
+    font-size: 1.5rem;
+    color: #f4ce14;
+    font-family: "Karla";
+  }
+  .cart-button {
+    padding: 8px;
+    height: 50px;
+    width: 85px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Karla";
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  } */
+
+  .cardTitle {
+    color: #f4ce14;
+    font-family: "MarkaziText";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    margin-bottom: 5px;
+  }
+
+  .cardDesc {
+    font-family: "Karla";
+    color: #edefee;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2em;
+    max-height: 3.6em;
+    max-width: 25vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-align: center;
+  }
+  .articleCardsContainer {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(49%, 49%));
+    border: 1px solid white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    gap: 3px;
+    margin: 50px 0;
+  }
+  .cardSection {
+    background: #495e57;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    border-bottom: 1px solid #edefee;
+    border-radius: 10px;
+  }
+
+  .cardImg {
+    margin-bottom: 5px;
+    margin-top: 24px;
+    border-radius: 16px;
+    width: 95%;
+    height: 187px;
+    border: 1px solid black;
+  }
+
+  .priceAndCart {
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px;
+  }
+
+  .item-price {
+    font-size: 1.5rem;
+    color: #f4ce14;
+    font-family: "Karla";
+  }
+  .cart-button {
+    padding: 8px;
+    height: 50px;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Karla";
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
   }
 }
 
 /* DESKTOP - VIEW */
 
 @media (min-width: 992px) {
+  .priceAndCart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0px;
+  }
+  .item-price {
+    font-size: 1.5rem;
+    color: #f4ce14;
+    font-family: "Karla";
+  }
+  .cart-button {
+    padding: 8px;
+    height: 50px;
+    width: 85px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Karla";
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
   .cardImg {
     height: 200px;
     width: 100%;
@@ -87,7 +220,6 @@
   .cardSection:hover {
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
   }
 
   .cardTitle {
