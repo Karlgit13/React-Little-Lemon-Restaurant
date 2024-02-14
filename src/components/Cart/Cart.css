@@ -1,65 +1,63 @@
-
-
-@media (max-width: 992px) {
-    .cart-page {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    .cart-list {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(70px, auto));
-        /* display: inline-flex;
-        justify-content: space-around;
-        margin: 25px 0; */
-    }
-    
-    .cart-image {
-        width: 25px;
-        height: 25px;
-    }
-    .cart-items {
-        display: flex;
-        flex-direction: column;
-    }
-    .cart-item {
-        display: inline-flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .cart-remove-icon {
-        width: 10px;
-        height: 10px;
-    }
-}
-
 .cart-page {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .cart-list {
-    font-family: "MarkaziText";
-    font-size: 1.1rem;
-    font-weight: 500;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10vw, 10vw));
-    place-items: center;
-    justify-content: space-evenly;
-    text-align: center;
+  font-family: "MarkaziText";
+  font-size: calc(1rem + 1vw);
+  font-weight: 500;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10vw, 10vw));
+  place-items: center;
+  justify-content: space-evenly;
+  text-align: center;
 }
 .cart-item {
-    font-family: "Karla";
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10vw, 10vw));
-    place-items: center;
-    justify-content: space-evenly;
-    text-align: center;
+  font-family: "Karla";
+  font-size: calc(0.6rem + 0.5vw);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10vw, 10vw));
+  place-items: center;
+  justify-content: space-evenly;
+  text-align: center;
 }
+
 .item-quantity {
-    background-color: lightgrey;
-    padding: 4px 14px;
-    border: 1px solid black;
+  background-color: lightgrey;
+  padding: 4px 14px;
+  border: 1px solid black;
+}
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+  padding-bottom: auto;
+}
+.cart-title {
+  margin: 0 10px;
+  font-family: "MarkaziText";
+}
+.cart-subtotal,
+.cart-shipping,
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  font-family: "Karla";
+}
+.cart-button-cart {
+  background-color: #f4ce14;
+  padding: 8px;
+  height: 50px;
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Karla";
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #000;
 }

@@ -36,33 +36,26 @@ const Cart = () => {
             />
           </div>
         ))}
-        <div className="cartitems-down">
-          <div className="cartitems-total">
-            <h1>Cart Totals</h1>
+        <div className="cart-container">
+          <div>
+            <h1 className="cart-title">Cart Totals</h1>
             <div>
-              <div className="cartitems-total-item">
+              <div className="cart-subtotal">
                 <p>Subtotal</p>
                 <p>${getTotalCartAmount()}</p>
               </div>
               <hr />
-              <div className="cartitems-total-item">
+              <div className="cart-shipping">
                 <p>Shipping Fee</p>
                 <p>Free</p>
               </div>
               <hr />
-              <div className="cartitems-total-item">
+              <div className="cart-total">
                 <h3>Total</h3>
                 <h3>${getTotalCartAmount()}</h3>
               </div>
             </div>
-            <button>PROCEES TO CHECKOUT</button>
-          </div>
-          <div className="cartitems-promocode">
-            <p>If you have a promo code, Enter it here</p>
-            <div className="cartitems-promobox">
-              <input type="text" placeholder="promo code" />
-              <button>Submit</button>
-            </div>
+            <button className="cart-button-cart">PROCEES TO CHECKOUT</button>
           </div>
         </div>
       </div>
