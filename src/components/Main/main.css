@@ -293,8 +293,8 @@
     overflow-x: auto;
     white-space: nowrap;
     color: #475e57;
-
-    button {
+  }
+  .mainScrollMenu button {
       padding: 4px 12px;
       margin: 0px 5px;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -309,6 +309,5 @@
       font-weight: 700;
       line-height: normal;
       cursor: pointer;
-    }
-  }
+}
 }
