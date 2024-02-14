@@ -1,0 +1,65 @@
+
+
+@media (max-width: 992px) {
+    .cart-page {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .cart-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(70px, auto));
+        /* display: inline-flex;
+        justify-content: space-around;
+        margin: 25px 0; */
+    }
+    
+    .cart-image {
+        width: 25px;
+        height: 25px;
+    }
+    .cart-items {
+        display: flex;
+        flex-direction: column;
+    }
+    .cart-item {
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cart-remove-icon {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.cart-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.cart-list {
+    font-family: "MarkaziText";
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10vw, 10vw));
+    place-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.cart-item {
+    font-family: "Karla";
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10vw, 10vw));
+    place-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.item-quantity {
+    background-color: lightgrey;
+    padding: 4px 14px;
+    border: 1px solid black;
+}

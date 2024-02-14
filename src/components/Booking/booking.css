@@ -5,6 +5,7 @@
   flex-direction: column;
   background-color: #495e57;
   padding: 32px;
+  height: 100vh;
 }
 
 .booking-form {
